@@ -45,7 +45,7 @@ will serve as a helpful study guide for the exam.
    ```
 
 1. Generate the API documentation website for all of the code in the `cs1302` package. 
-   Host the documentation on Odin using `cs1302-hw03-doc` as the name for your symbolic link.
+   Host the documentation on Odin using `cs1302-savable-doc` as the name for your symbolic link.
    What is the URL to your hosted website?
    
 1. Using the API documentation website you generated in the last step, look at the documentation for
