@@ -1,3 +1,8 @@
+package cs1302.hw03.contract;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
 /**
  * An object that can be saved to a file. Implementing classes must have a
  * concrete definition for the {@link #save(java.io.File) save(File)} method,

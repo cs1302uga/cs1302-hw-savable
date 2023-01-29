@@ -1,5 +1,9 @@
 package cs1302.hw03.contract;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import cs1302.hw03.contract.Savable;
+
 /**
  * Represents the progress made in a video game. Each object stores the user's current
  * score and level.
