@@ -49,7 +49,7 @@ will serve as a helpful study guide for the exam.
    What is the URL to your hosted website?
    
 1. Using the API documentation website you generated in the last step, look at the documentation for
-   the three class files provided in the starter code. For each Java file, fill out a row in a table similar to the 
+   the class files provided in the starter code. For each Java file, fill out a row in a table similar to the 
    following in your notes:
 
    **Note:** If a class is not an interface and does not implement an interface, write `NA` in the second
@@ -61,20 +61,23 @@ will serve as a helpful study guide for the exam.
    |-----------------------|----------------------------------|----------------------------|------------|
    |-----------------------|----------------------------------|----------------------------|------------|
    |-----------------------|----------------------------------|----------------------------|------------|
+   |-----------------------|----------------------------------|----------------------------|------------|
 
-1. Read through the Javadoc comments for the `Drivable` interface on the API website you generated or in the source
-   code. Make a note of the methods contained in the interface. You may find it helpful to write them in your notes.
+1. Read through the Javadoc comments for the `cs1302.hw03.contract.Savable` interface on the API website you generated or in the source
+   code. Make a note of the method(s) contained in the interface. You may find it helpful to write the signature(s) in your notes.
 
-1. Look at the `speedUp` method in the `Car.java` file. Compare the Javadoc comment for the
+1. Look at the `save` method in the `GameProgress.java` file. Compare the Javadoc comment for the
    method in that file to the documentation listed for that method in the API documentation
-   website. Notice that there is no Javadoc comment in the source code. However, a comment still
-   shows up on the website. How is this possible?
+   website. Notice that the Javadoc website includes the comment from the interface as well as the additional comment on the `save` method in `GameProgress`. 
+   The Javadoc comment in the method shows how you can inherit documentation from
+   the interface your class implements.
 
 1. Run the given code through `checkstyle` using the `check1302` command and fix any errors that it gives.
    Remember to use the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide) as a reference
    for the various types of errors that may pop up.
    
-1. Before moving on, we highly recommend drawing out the UML diagram for these classes and creating a 
+1. Before moving on, we highly recommend drawing out the UML diagram for the given classes to better understand their relationships. 
+We also highly recommend and creating a 
    [compile script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md) for 
    quick and easy compilation.
    
@@ -84,6 +87,10 @@ will serve as a helpful study guide for the exam.
 
 <hr/>
 
+1. Take a close look at the source code in `GameProgress.java`. Notice that the class
+has two instance variables and how the `save` method writes these instance variables to the file passed into the `save` method.
+
+1. Now, take a look at the `Driver.java` file in the `cs1302.hw03` package. 
 1. Before class: Download the code for the `cs1302-interfaces` tutorial. Here is the download command:
 
    ```
