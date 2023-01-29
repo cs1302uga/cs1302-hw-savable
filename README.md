@@ -1,53 +1,89 @@
-# Basic Interfaces
+# hw03 Interfaces (ADTs)
 
-Reminder of deadlines. Then jump right in to code.
+![Approved for: Spring 2023](https://img.shields.io/badge/Approved%20for-Spring%202023-magenta)
 
-## Introduction
+This homework is designed to get you acquainted with Interfaces in Java.
+When a seasoned programmer or potential employer asks you if you know 
+Object-Oriented Programming (OOP), they do not mean, "do you know classes and objects?" 
+Instead, they mean, "do you know the pillars of OOP?" The pillars of OOP are interfaces, 
+inheritance, and polymorphism. In this exercise, we continue the exploration of interfaces 
+and interface-based polymorphism. 
 
-Interfaces tutorial assigned for last night. How did that go?
+## Prerequisite Knowledge
 
-Most mistakes I'm seeing are very minor. Doing a great job overall. If a bug occurs, remember to add print statements to help you follow
-the flow of control of the application. Print "In the loop", print variables, etc.
+* A basic understanding of creating and implementing interfaces in Java.
+* [CSCI 1302 Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
 
-Discuss the project?
+## Course-Specific Learning Outcomes
 
-## TODO
-
-1. Do the poll on eLC.
-
-1. Define interface and general terminology while going over the poll.
-
-   * In its simplest form, a Java interface is a reference type composed of abstract methods and constants. An
-     abstract method is a non-static method without an implementation (body). Constants are variables (static or not)
-     that are declared using the final keyword.
-
-   * Interfaces are used to specify that a type **can do** a set of things specified by its abstract methods and constants. An
-     interface serves as a **contract** for the classes that claim to implement the interface. Multiple classes can implement
-     the same interface, each providing their own implementation of the contracted functionality. For this reason, it is
-     important that the documentation for an interface describe what a method does and not necessarily how it should do it.
-     Such documentation is usually written using Javadoc comments in the interface.
-
-1. In office hours, a student asked "why do we need interfaces?". I answered by drawing the `Athlete` UML diagram. This description
-   really helped the student so I ended up doing it at the start of class. The basic idea was:
-   * The `Athlete` interface had three methods: `compete`, `train`, `rest`.
-   * I drew the UML for `Athlete` and two implementing classes and discussed how the methods were only implemented in the implementing
-     classes. This made sense intuitively to the student (you can't define `compete` at the `Athlete` level).
-   * Then, we wrote a method called `doRoutine` that looked like this:
-
-   ```java
-   public static void doRoutine(TrackAthlete a) {
-       while (true) {
-           a.train();
-           a.rest();
-           a.compete();
-       } // while
-   } // doRoutine
-   ```
-   * Then, we discussed what would be needed to have a `doRoutine` method that works on a `FootballPlayer`, for example. They said we would
-     have to copy/paste the method. Then, we discussed how using the interface type allows us to have only one method.
-   * Finally, we showed what a call to this would look like from a `main` method.
-   * This flowed nicely in the class after doing the poll. They already understood compatibility at a basic level.
+* **LO2.e:** (Partial) Utilize existing generic methods, interfaces, and classes in a software solution.
+* **LO3.b:** Create class, interface, method, and inline documentation that satisfies a 
+set of requirements.
+* **LO3.c:** Generate user-facing API documentation for a software solution.
+* **L04.b:** Utilize interface-based polymorphism in a software solution.
  
+## Questions
+
+In your notes, clearly answer the questions in the following exercise steps. All instructions assume that you are 
+logged into the Odin server.
+
+**NOTE:** For each step, please provide in your notes the full command that you typed to make the related 
+action happen along with an explanation of why that command worked. Some commands require multiple options. 
+It is important to not only recall what you typed but also why you typed each of them. If context is necessary 
+(e.g., the command depends on your present working directory), then please note that context as well.
+You won't need to submit your notes in your final submission. However, if done properly, your exercise notes 
+will serve as a helpful study guide for the exam.
+
+## Exercise Steps
+
+### Checkpoint 1 Steps - Getting Started
+
+1. Use Git to clone the repository for this exercise onto Odin into a subdirectory called `cs1302-savable`:
+
+   ```
+   $ git clone https://github.com/cs1302uga/cs1302-savable.git
+   ```
+
+1. Generate the API documentation website for all of the code in the `cs1302` package. 
+   Host the documentation on Odin using `cs1302-hw03-doc` as the name for your symbolic link.
+   What is the URL to your hosted website?
+   
+1. Using the API documentation website you generated in the last step, look at the documentation for
+   the three class files provided in the starter code. For each Java file, fill out a row in a table similar to the 
+   following in your notes:
+
+   **Note:** If a class is not an interface and does not implement an interface, write `NA` in the second
+   column. Also, the "Depends On" column should list any Java types in the `cs1302.hw03` package that the file
+   is dependent upon. 
+
+   | Name of the Java file | Interface or Implementing Class? | Fully Qualified Name (FQN) | Depends On |
+   |-----------------------|----------------------------------|----------------------------|------------|
+   |-----------------------|----------------------------------|----------------------------|------------|
+   |-----------------------|----------------------------------|----------------------------|------------|
+   |-----------------------|----------------------------------|----------------------------|------------|
+
+1. Read through the Javadoc comments for the `Drivable` interface on the API website you generated or in the source
+   code. Make a note of the methods contained in the interface. You may find it helpful to write them in your notes.
+
+1. Look at the `speedUp` method in the `Car.java` file. Compare the Javadoc comment for the
+   method in that file to the documentation listed for that method in the API documentation
+   website. Notice that there is no Javadoc comment in the source code. However, a comment still
+   shows up on the website. How is this possible?
+
+1. Run the given code through `checkstyle` using the `check1302` command and fix any errors that it gives.
+   Remember to use the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide) as a reference
+   for the various types of errors that may pop up.
+   
+1. Before moving on, we highly recommend drawing out the UML diagram for these classes and creating a 
+   [compile script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md) for 
+   quick and easy compilation.
+   
+<hr/>
+
+![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-1-success?style=for-the-badge)
+
+<hr/>
+
 1. Before class: Download the code for the `cs1302-interfaces` tutorial. Here is the download command:
 
    ```
