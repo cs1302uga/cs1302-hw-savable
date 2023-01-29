@@ -1,10 +1,10 @@
-package cs1302.hw03;
+package cs1302.hw03.contract;
 
 /**
  * Represents the progress made in a video game. Each object stores the user's current
  * score and level.
  */
-public class GameProgress {
+public class GameProgress implements Savable {
     /** Represents the user's current score in the game.*/
     private int score;
 
@@ -66,6 +66,18 @@ public class GameProgress {
             IllegalArgumentException iae = new IllegalArgumentException("Level must be positive");
             throw iae;
         } // if
-    } // set Level
+    } // setLevel
 
+    /**
+     * {@inheritDoc} Writes the instance variables of the class (one per line)
+     * to the specified {@code file}. The first line contains the current score
+     * of the game and the second line contains the current level.
+     */
+    @Override
+    public void save(File file) throws FileNotFoundException {
+        PrintWriter fileOut = new PrintWriter(file);
+        fileOut.println(this.score);
+        fileOut.println(this.level);
+        fileOut.close();
+    } // save
 } // GameProgress
