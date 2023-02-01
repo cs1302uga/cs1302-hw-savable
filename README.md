@@ -116,10 +116,23 @@ has two instance variables and how the `save` method writes these instance varia
 
 ### Checkpoint 3 Steps
 
-1. Modify the `Driver.java` file. Create 3 textbook objects. Put those objects into an array. Call the `saveAll` method on this array.
-   Your code should create 3 new textfiles with a `textbook` prefix ending with `.txt`.
-   **NOTE:** you cannot create any new methods to accomplish this. You can, however, modify the input parameters to the existing methods.
+1. Modify the `writeToFile` method in `Driver.java` file so that it also accepts `TextBook` references as input. **Note:** You should not
+   create any new methods or add new parameters to existing methods to accomplish this. You should only need to modify the input parameter(s) 
+   of the existing methods.
 
+1. Uncomment the call to `writeToFile` in the `main` method of `Driver.java` that takes `compilers` as input. Compile and run the code. You
+   should now see a file called `compilersInfo.txt` that contains the instance variables of the `TextBook` object referred to by variable
+   `compilers`. The contents of `compilersInfo.txt` should contain the following information (you can verify by opening the file with Emacs):
+   
+   ```
+   TextBook:
+   "Compilers" is published by Addison Wesley
+   ```
+
+1. Compare the contents of `compilersInfo.txt` to the contents of `progressInfo.txt`. These two files were created by the **same method**! Notice
+   how the `writeToFile` method behaves very differently depending on the type of object its parameter `object` refers to! This is 
+   **polymorphism** in action. The method behaves differently depending on its input.
+   
 1. Add your own class. It can be a simple class with as few as two instance variables. Have this class implement the `Savable` interface.
    If done properly, your new class will work with the `writeAll
 <hr/>
