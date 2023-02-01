@@ -3,6 +3,7 @@ package cs1302.hw03;
 import java.io.File;
 import java.io.FileNotFoundException;
 import cs1302.hw03.impl.GameProgress;
+import cs1302.hw03.impl.TextBook;
 
 /**
  * Tests the implementation of the {@code Savable} interface with multiple
@@ -16,34 +17,77 @@ public class Driver {
      * @param args the command-line arguments.
      */
     public static void main(String[] args) {
-        GameProgress game1 = new GameProgress(4_000, 2);
-        GameProgress game2 = new GameProgress(20_000, 3);
+        GameProgress game1 = new GameProgress(4000, 2);
+        GameProgress game2 = new GameProgress(500, 3);
+
+        // Saves an individual GameProgress object to a file called game1.txt
+        Driver.writeToFile(game1, "progressInfo.txt");
+
         GameProgress[] gpArray = new GameProgress[2];
         gpArray[0] = game1;
         gpArray[1] = game2;
-        Driver.saveAll(gpArray, "progress");
+
+        // Saves the array of GameProgress objects to files that start with "progress"
+        Driver.writeAllToFile(gpArray, "progress");
 
         // TODO: Create 3 Textbook objects, add them to an array, call saveAll
         // Do not add any methods. Modify the existing methods to make this work.
+        // Give them the textbook objects and maybe even the array.
+        // Then, in the document, tell them exactly what the layout of the file should be.
+        // TEXTBOOK:
+        // inst var 1, inst var 2
+        TextBook compilers = new TextBook("Compilers", "Addison Wesley");
+        TextBook database = new TextBook("Database Systems", "Prentice Hall");
+        TextBook systems = new TextBook("C++: How to Program", "Pearson");
+
+        // Saves an individual GameProgress object to a file called compilersInfo.txt.
+        // Uncomment after updating writeToFile to work with TextBook objects.
+        // Driver.writeToFile(compilers, "compilersInfo.txt");
+
+        TextBook[] tbArray = new TextBook[3];
+        tbArray[0] = compilers;
+        tbArray[1] = database;
+        tbArray[2] = systems;
+
+        // Saves the array of TextBook objects to files that start with "book".
+        // Uncomment after updating writeAllToFile to work with TextBook objects.
+        // Driver.writeAllToFile(tbArray, "book");
 
     } // main
 
-    // TODO: Add Javadoc Comments
-    public static void save(GameProgress object, String filename) {
+    /**
+     * Writes (saves) a single {@code GameProgress} object to the file specified by
+     * {@code filename}. This method invokes the {@code save} method on the provided
+     * {@code object}.
+     *
+     * @param object the object to save.
+     * @param filename the name of the file to write the data.
+     */
+    public static void writeToFile(GameProgress object, String filename) {
         try {
             File saveFile = new File(filename);
+            // write the instance variables to a file using the save method in GameProgress
             object.save(saveFile);
         } catch (FileNotFoundException notFoundException) {
             System.err.println("Unable to save:");
             System.err.println(notFoundException.getMessage());
         } // try
-    } // save
+    } // writeToFile
 
-    private static void saveAll(GameProgress[] objects, String prefix) {
+    /**
+     * Writes (saves) an array of {@code GameProgress} objects to a set of files
+     * whose names begin with {@code prefix}. Each object in the {@code objects}
+     * array will be written to a separate file. The filename for a particular object
+     * will be the {@code prefix} followed by the objects index in the array.
+     *
+     * @param objects the array of objects to save.
+     * @param prefix the prefix for the filenames.
+     */
+    private static void writeAllToFile(GameProgress[] objects, String prefix) {
         for (int i = 0; i < objects.length; i++) {
             GameProgress object = objects[i];
             String filename = prefix + "" + i + ".txt";
-            Driver.save(object, filename);
+            Driver.writeToFile(object, filename); // write a single object to a file
         } // for
-    } // saveAll
+    } // writeAllToFile
 } // Driver
