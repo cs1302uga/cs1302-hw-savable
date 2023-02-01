@@ -2,13 +2,12 @@
 
 ![Approved for: Spring 2023](https://img.shields.io/badge/Approved%20for-Spring%202023-magenta)
 
-This homework is designed to get you acquainted with **interfaces** in Java.
 When a seasoned programmer or potential employer asks you if you know
 Object-Oriented Programming (OOP), they are NOT asking, "do you know classes and objects?"
-Instead, what they are really asking is , "do you know the pillars of OOP?"
-The pillars of OOP are encapsulation, interfaces (sometimes also called abstraction),
-inheritance, and polymorphism. In this exercise, we continue the exploration of interfaces
-and interface-based polymorphism.
+Instead, what they are really asking is , "do you know how to apply the pillars of OOP?"
+The pillars of OOP are: _encapsulation_, _abstraction_ / _interfaces_, _inheritance_,
+and _polymorphism_. **This homework is designed to help you understand interfaces and 
+interface-based polymorphism in Java.**
 
 ## Prerequisite Knowledge
 
