@@ -120,6 +120,8 @@ has two instance variables and how the `save` method writes these instance varia
    Your code should create 3 new textfiles with a `textbook` prefix ending with `.txt`.
    **NOTE:** you cannot create any new methods to accomplish this. You can, however, modify the input parameters to the existing methods.
 
+1. Add your own class. It can be a simple class with as few as two instance variables. Have this class implement the `Savable` interface.
+   If done properly, your new class will work with the `writeAll
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-3-success?style=for-the-badge)
