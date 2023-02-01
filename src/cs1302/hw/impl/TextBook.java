@@ -1,4 +1,4 @@
-package cs1302.hw03.impl;
+package cs1302.hw.impl;
 
 /**
  * Represents a textbook used for a class. Each object stores the book's title

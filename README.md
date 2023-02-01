@@ -61,12 +61,12 @@ will serve as a helpful study guide for the exam.
 
    | FQN                           | Interface or Implementing Class? | List of Dependencies       |
    |-------------------------------|----------------------------------|----------------------------|
-   |`cs1302.hw03.contract.Savable` |----------------------------------|----------------------------|
-   |`cs1302.hw03.TextBook`         |----------------------------------|----------------------------|
-   |`cs1302.hw03.GameProgress      |----------------------------------|----------------------------|
-   |`cs1302.hw03.Driver`           |----------------------------------|----------------------------|
+   |`cs1302.hw.contract.Savable` |----------------------------------|----------------------------|
+   |`cs1302.hw.TextBook`         |----------------------------------|----------------------------|
+   |`cs1302.hw.GameProgress      |----------------------------------|----------------------------|
+   |`cs1302.hw.Driver`           |----------------------------------|----------------------------|
 
-1. Read through the Javadoc comments for the `cs1302.hw03.contract.Savable` interface on the API website you generated or in the source
+1. Read through the Javadoc comments for the `cs1302.hw.contract.Savable` interface on the API website you generated or in the source
    code. Make a note of the method(s) contained in the interface. Remember, all classes that implement `Savable` are required to provide
    implementations (concrete definitions) for all of the abstract methods in the interface.
 
@@ -116,7 +116,7 @@ will serve as a helpful study guide for the exam.
    you are used to using to print data to the screen. In the `save` method, we create a `PrintWriter` object and then use `println` 
    to print variables to the file.
 
-1. Now, take a look at the `Driver.java` file in the `cs1302.hw03` package. In this file, we create two `GameProgress` objects
+1. Now, take a look at the `Driver.java` file in the `cs1302.hw` package. In this file, we create two `GameProgress` objects
    and reference them with variables of the same type. We then save these objects to files on the disk.
 
 1. Compile `Savable.java`, `GameProgress.java`, and `Driver.java`. We recommend creating a compile script so you don't have to type

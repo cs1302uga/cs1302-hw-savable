@@ -1,4 +1,4 @@
-package cs1302.hw03.contract;
+package cs1302.hw.contract;
 
 import java.io.File;
 import java.io.FileNotFoundException;

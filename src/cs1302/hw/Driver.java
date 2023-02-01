@@ -1,9 +1,9 @@
-package cs1302.hw03;
+package cs1302.hw;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import cs1302.hw03.impl.GameProgress;
-import cs1302.hw03.impl.TextBook;
+import cs1302.hw.impl.GameProgress;
+import cs1302.hw.impl.TextBook;
 
 /**
  * Tests the implementation of the {@code Savable} interface with multiple
