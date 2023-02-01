@@ -85,4 +85,5 @@ public class GameProgress implements Savable {
         fileOut.println(this.level);
         fileOut.close();
     } // save
+
 } // GameProgress
