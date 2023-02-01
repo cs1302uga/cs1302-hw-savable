@@ -49,39 +49,57 @@ will serve as a helpful study guide for the exam.
    Host the documentation on Odin using `cs1302-hw-savable-doc` as the name for your symbolic link.
    What is the URL to your hosted website?
 
-1. Using the API documentation website you generated in the last step, look at the documentation for
-   the class files provided in the starter code. For each Java file, fill out a row in a table similar to the
-   following in your notes:
+1. In your browser of choice, navigate to the API documentation website you generated in the previous step and click
+   on the **TREE** link at the top of the page. This will show you the hierarchy of the classes and the interface 
+   included in the starter code. Look at the documentation for the three class files (`Driver`, `GameProgress` and 
+   `TextBook`) and the interface (`Savable`) provided in the starter code (ignoring the `java.lang.Object` class 
+   for now). For each of these four files, fill out a row in a table similar to the following in your notes:
 
    **Note:** If a class is not an interface and does not implement an interface, write `NA` in the second
-   column. Also, the "Depends On" column should list any Java types in the `cs1302.hw03` package that the file
-   is dependent upon.
+   column. Also, the "List of Dependencies" column should list any Java types (classes/interfaces) in the 
+   provided packages that the related `.java` file is dependent upon.
 
-   | Name of the Java file | Interface or Implementing Class? | Fully Qualified Name (FQN) | Depends On |
-   |-----------------------|----------------------------------|----------------------------|------------|
-   |-----------------------|----------------------------------|----------------------------|------------|
-   |-----------------------|----------------------------------|----------------------------|------------|
-   |-----------------------|----------------------------------|----------------------------|------------|
-   |-----------------------|----------------------------------|----------------------------|------------|
+   | FQN                           | Interface or Implementing Class? | List of Dependencies       |
+   |-------------------------------|----------------------------------|----------------------------|
+   |`cs1302.hw03.contract.Savable` |----------------------------------|----------------------------|
+   |`cs1302.hw03.TextBook`         |----------------------------------|----------------------------|
+   |`cs1302.hw03.GameProgress      |----------------------------------|----------------------------|
+   |`cs1302.hw03.Driver`           |----------------------------------|----------------------------|
 
 1. Read through the Javadoc comments for the `cs1302.hw03.contract.Savable` interface on the API website you generated or in the source
-   code. Make a note of the method(s) contained in the interface. You may find it helpful to write the signature(s) in your notes.
+   code. Make a note of the method(s) contained in the interface. Remember, all classes that implement `Savable` are required to provide
+   implementations (concrete definitions) for all of the abstract methods in the interface.
 
-1. Look at the `save` method in the `GameProgress.java` file. Compare the Javadoc comment for the
-   method in that file to the documentation listed for that method in the API documentation
-   website. Notice that the Javadoc website includes the comment from the interface as well as the additional comment on the `save` method in `GameProgress`.
-   The Javadoc comment in the method shows how you can inherit documentation from
-   the interface your class implements.
+1. The `GameProgress` class already properly implements the `Savable` interface. For this step, you need to pull up the source code
+   in `GameProgress.java` alongside the Javadoc website for that class. Once those are both open:
+   1. Look at the Javadoc comment above the `save` method in the `GameProgress.java` file. 
+   1. Compare the Javadoc comment in the `.java` file to the documentation shown for that method on the API documentation website. 
+   1. Notice that the Javadoc website includes the comment from the interface as well as the additional comment above the `save` 
+   method in `GameProgress.java`. 
+   1. The Javadoc comment in the method demonstrates how you can inherit documentation from the interface your class implements. The
+   `@inheritDoc` tag pulls the documentation from the `save` method written in the `Savable` interface.
 
-1. Run the given code through `checkstyle` using the `check1302` command and fix any errors that it gives.
-   Remember to use the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide) as a reference
-   for the various types of errors that may pop up.
+1. Draw out the [UML diagram](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/uml/uml.md) for the given classes 
+   and interface to better understand their relationships.
 
-1. Before moving on, we highly recommend drawing out the UML diagram for the given classes to better understand their relationships.
-We also highly recommend and creating a
-   [compile script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md) for
-   quick and easy compilation.
+1. Create a single [script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md) that compiles each file
+   individually. This will save you a lot of time later since you won't have to retype the compilation commands each time you want to compile.
+   It will also help you avoid compilation mistakes.
+   
+1. Make sure your compile script works before continuing. If it worked properly, the output from `tree bin` should look like the following:
 
+   ```
+   bin
+   └── cs1302
+       └── hw03
+           ├── contract
+           │   └── Savable.class
+           ├── Driver.class
+           └── impl
+               ├── GameProgress.class
+               └── TextBook.class
+   ```
+   
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-1-success?style=for-the-badge)
@@ -90,8 +108,13 @@ We also highly recommend and creating a
 
 ### Checkpoint 2 Steps
 
-1. Take a close look at the source code in `GameProgress.java`. Notice that the class
-has two instance variables and how the `save` method writes these instance variables to the file passed into the `save` method.
+1. Take a close look at the source code in `GameProgress.java`. Notice that the class has two instance variables (`score` and `level`)
+   and that the `save` method writes (saves) these instance variables to the file passed into the `save` method as a parameter. The
+   Javadoc comment above the `save` method describes how the instance variables will be written to the file.
+   
+   **NOTE:** `PrintWriter` objects allow you to print data to a file using method names that are similar (in name) to the methods 
+   you are used to using to print data to the screen. In the `save` method, we create a `PrintWriter` object and then use `println` 
+   to print variables to the file.
 
 1. Now, take a look at the `Driver.java` file in the `cs1302.hw03` package. In this file, we create two `GameProgress` objects
    and reference them with variables of the same type. We then save these objects to files on the disk.
