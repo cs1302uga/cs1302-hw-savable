@@ -30,12 +30,6 @@ public class Driver {
         // Saves the array of GameProgress objects to files that start with "progress"
         Driver.writeAllToFile(gpArray, "progress");
 
-        // TODO: Create 3 Textbook objects, add them to an array, call saveAll
-        // Do not add any methods. Modify the existing methods to make this work.
-        // Give them the textbook objects and maybe even the array.
-        // Then, in the document, tell them exactly what the layout of the file should be.
-        // TEXTBOOK:
-        // inst var 1, inst var 2
         TextBook compilers = new TextBook("Compilers", "Addison Wesley");
         TextBook database = new TextBook("Database Systems", "Prentice Hall");
         TextBook systems = new TextBook("C++: How to Program", "Pearson");
