@@ -326,7 +326,7 @@ as a helpful study guide for the exam.
    Sally Smith (811-000-999)
    https://webwork.cs.uga.edu/~your_username/cs1302-hw-savable-doc/
    I created a class called Turtle because I am a huge fan of turtles. The class has three instance variables
-   (`genus`, `species`, and `weight`).
+   (genus, species, and weight).
    ```
 
 1. Change directories to the parent of `cs1302-hw-savable` (e.g., `cd
