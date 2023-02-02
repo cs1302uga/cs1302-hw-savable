@@ -155,7 +155,7 @@ as a helpful study guide for the exam.
    ```
    bin
    └── cs1302
-       └── hw03
+       └── hw
            ├── contract
            │   └── Savable.class
            ├── Driver.class
