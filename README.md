@@ -183,28 +183,42 @@ as a helpful study guide for the exam.
    using method names that are similar (in name) to the methods you
    are used to using to print data to the screen. In the `save`
    method, we create a `PrintWriter` object and then use `println` to
-   print variables to the file.
+   print variables to the file that's passed in as a parameter.
 
 1. Now, take a look at the `Driver.java` file in the `cs1302.hw`
-   package. In this file, we create two `GameProgress` objects and
-   reference them with variables of the same type. We then save these
-   objects to files on the disk.
+   package. In the `main` method you will see instructions to accomplish
+   the following tasks:
+   1. Create two `GameProgress` objects and reference them with 
+      `GameProgress` variables named `game1` and `game2`.
+   1. Write the instance variables of the object reference by
+      `game1` to a file called `progressInfo.txt` using the
+      `writeToFile` method of the `Driver` class.
+   1. Add `game1` and `game2` to an array called `gpArray`.
+   1. Write the contents of both `GameProgress` objects to
+      two separate files that start with `progress` using
+      the `writeAllToFile` method of the `Driver` class.
+   1. You can ignore the rest of the `main` method for now.
+
+1. Before you run the code, take a minute to write down what
+   you expect to happen after the calls to `writeToFile` and
+   `writeAllToFile` are executed.
 
 1. Modify the script that you created in the previous checkpoint
    to include the `java` command to run `cs1302.hw.Driver`
    after all of the `javac` commands. Since the `Driver` program
    is expected to create some files in current directory, add
-   the `ls -lh` command both before and after the `java` command
-   to make it easier to see if the program works as intended.
+   the `ls -lh` command to the script both before and after the 
+   `java` command to make it easier to see if the program works 
+   as intended.
 
 1. Run your modified script to recompile source code, list the
    files in the current directory, run the `Driver`, then list
    files in the current directory again -- all in a single command!
 
-   You should now see two new files named `progress0.txt` and
-   `progress1.txt` that contain the instance variables for the two
-   `GameProgess` objects created by `Driver`. Look inside them to
-   confirm this. Cool, huh?!?
+   You should now see three new files named `progressInfo.txt`, 
+   `progress0.txt` and `progress1.txt` that contain the instance 
+   variables for the two `GameProgess` objects created by `Driver`. 
+   Look inside them to confirm this. Cool, huh?!?
 
    **NOTE** You can add the `rm` commands to delete these files before
    the first `ls -lh` command in your script so that they never
@@ -214,9 +228,21 @@ as a helpful study guide for the exam.
    the `Savable` interface. You will need to add a `save` method that
    works similarly to the `save` method in `GameProgress`. However,
    your `save` method should write the instance variables of the
-   calling object (of type `TextBook`) to a file. Remember to provide
-   an appropriate Javadoc comment outlining the format of the file
-   this method will create.
+   calling object (of type `TextBook`) to a file. The format for these
+   files should be:
+   
+   ```
+   TextBook:
+   "TITLE" is published by PUBLISHER
+   ```
+   
+   Where TITLE and PUBLISHER are replaced by the instance variables
+   of the `TextBook` class, `title` and `publisher`.
+   
+   
+1. Remember to provide an appropriate Javadoc comment above the `save`
+   method in `TextBook` outlining the format of the file the method will 
+   create. You can use the comment in `GameProgress` as a template.
 
 1. Use your compile script to recompile your code and run `check1302`.
 
@@ -253,11 +279,29 @@ as a helpful study guide for the exam.
    differently depending on the type of object its parameter `object`
    refers to! This is **polymorphism** in action. The method behaves
    differently depending on its input.
+   
+1. In the `main` method of `Driver.java`, uncomment the call to 
+   `writeAllToFile` that takes `tbArray` as the first input. What do
+   you expect to happen when you run the file? Go ahead and run it to
+   verify that it works as expected.
 
-1. Add your own class. It can be a simple class with as few as two
-   instance variables. Have this class implement the `Savable`
-   interface.  If done properly, your new class will work with the
-   `writeAll
+1. Add your own class to the `cs1302.hw.impl` package. It can be a 
+   simple class with as few as two instance variables. Have this 
+   class implement the `Savable` interface.  If done properly, 
+   your new class will work with the `writeToFile` and `writeAllToFile` 
+   methods now that those methods work with any object that implements 
+   the `Savable` interface!
+   
+1. Test your new class by creating a couple objects in the `Driver` class
+   and making calls to both `writeToFile` and `writeAllToFile` using your
+   new type class.
+   
+1. Once you are confident that the code is running as expected, verify that 
+   your code passes the `checkstyle` audit using the command `check1302 src`.
+
+1. Generate the API documentation website for all of the code in the
+   `cs1302` package. Host the documentation on Odin using `cs1302-hw-savable`
+   as the name of your symbolic link.
 
 <hr/>
 
@@ -274,12 +318,15 @@ as a helpful study guide for the exam.
 
    1. Your name and UGA ID number; and
    1. Full URL for your hosted API website
+   1. A short description of the new class that you added to the `cs1302.hw.impl` package in checkpoint 3.
 
    Here is an example of the contents of `SUBMISSION.md`.
 
    ```
    Sally Smith (811-000-999)
    https://webwork.cs.uga.edu/~your_username/cs1302-hw-savable-doc/
+   I created a class called Turtle because I am a huge fan of turtles. The class has three instance variables
+   (`genus`, `species`, and `weight`).
    ```
 
 1. Change directories to the parent of `cs1302-hw-savable` (e.g., `cd
