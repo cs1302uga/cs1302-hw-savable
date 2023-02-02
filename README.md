@@ -104,7 +104,7 @@ as a helpful study guide for the exam.
    names of the abstract methods declared in the interface -- the
    classes that implement `Savable` are contractually obligated to
    provide implementations (i.e., method definitions with bodies) for
-   all of its abstract methods.
+   all of those abstract methods.
 
 1. The `GameProgress` class already properly implements the `Savable`
    interface. For this step, rearrange what is on your screen so that
