@@ -303,6 +303,12 @@ as a helpful study guide for the exam.
    `cs1302` package. Host the documentation on Odin using `cs1302-hw-savable`
    as the name of your symbolic link.
 
+1. Take a minute to reflect on what you did in this homework assignment. You were
+   able to modify a method called `writeToFile` that was originally designed to
+   work for only one type, `GameProgress`, so that it could work with many different
+   types. Specifically, any class that implements the `Savable` interface. That's
+   an extremely powerful tool in software development!
+
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-3-success?style=for-the-badge)
