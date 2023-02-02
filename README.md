@@ -52,7 +52,7 @@ as a helpful study guide for the exam.
    ```
 
 1. Generate the API documentation website for the `cs1302` package and
-   subpackages. Host the documentation on Odin using
+   sub-packages. Host the documentation on Odin using
    `cs1302-hw-savable-doc` as the name for your symbolic link.
    **What is the URL to your hosted website?**
 
@@ -145,7 +145,7 @@ as a helpful study guide for the exam.
    ```
 
    One your script is setup correctly, you can run it to recompile
-   everyting instead of typing the compilation commands again or finding
+   everything instead of typing the compilation commands again or finding
    them in your shell history!
 
 1. Make sure that your script works properly before continuing to the
@@ -210,7 +210,7 @@ as a helpful study guide for the exam.
    the first `ls -lh` command in your script so that they never
    appear in your script's output before the `Driver` is run.
 
-1. Now, modfy the `TextBook.java` file so that it properly implements
+1. Now, modify the `TextBook.java` file so that it properly implements
    the `Savable` interface. You will need to add a `save` method that
    works similarly to the `save` method in `GameProgress`. However,
    your `save` method should write the instance variables of the
@@ -218,7 +218,7 @@ as a helpful study guide for the exam.
    an appropriate Javadoc comment outlining the format of the file
    this method will create.
 
-1. Use your compile script to reCompile your code and run `check1302`.
+1. Use your compile script to recompile your code and run `check1302`.
 
 <hr/>
 
