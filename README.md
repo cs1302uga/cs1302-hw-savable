@@ -65,7 +65,7 @@ as a helpful study guide for the exam.
    (`Savable`) provided in the starter code (you should ignore the
    `java.lang.Object` class for now).
 
-   1. **Create a copy of the table below in your notes:*
+   1. **Create a copy of the table below in your notes:**
 
       | FQN                           | Keyword | Implements | Dependencies |
       |-------------------------------|---------|------------|--------------|
@@ -76,7 +76,8 @@ as a helpful study guide for the exam.
 
    1. Each row should include information about the reference type
       named in the FQN column. With that in mind, **fill in the blanks
-      according to the following column descriptions**:
+      according to the following column descriptions** -- use the API
+      website you created to get the information that you need:
 
       * FQN - the fully qualified name of a reference type (e.g., the
         name of a class, interface, or enum);
