@@ -201,7 +201,9 @@ as a helpful study guide for the exam.
 
 1. Before you run the code, take a minute to write down what
    you expect to happen after the calls to `writeToFile` and
-   `writeAllToFile` are executed.
+   `writeAllToFile` are executed. Ignore any code below the
+   call to `writeAllToFile` for now. That code involves the
+   `TextBook` class which we aren't worried about for now.
 
 1. Modify the script that you created in the previous checkpoint
    to include the `java` command to run `cs1302.hw.Driver`
@@ -218,11 +220,16 @@ as a helpful study guide for the exam.
    You should now see three new files named `progressInfo.txt`, 
    `progress0.txt` and `progress1.txt` that contain the instance 
    variables for the two `GameProgess` objects created by `Driver`. 
-   Look inside them to confirm this. Cool, huh?!?
+   Look inside them to confirm this. Cool, huh?!? Note that two of the
+   files will contain the same data. Take a look at the code to make
+   sure you understand why this happened.
 
-   **NOTE** You can add the `rm` commands to delete these files before
-   the first `ls -lh` command in your script so that they never
-   appear in your script's output before the `Driver` is run.
+   **NOTE** You can add the `rm` command(s) to delete the `.txt` files 
+   that were just created. If you want to do this, add the appropriate
+   `rm` command(s) before the first `ls -lh` command in your script 
+   so that they never appear in your script's output before the `Driver` 
+   is run. They will only appear when you execute first `ls -lh` if you
+   are running the script for the second time.
 
 1. Now, modify the `TextBook.java` file so that it properly implements
    the `Savable` interface. You will need to add a `save` method that
@@ -237,14 +244,18 @@ as a helpful study guide for the exam.
    ```
    
    Where TITLE and PUBLISHER are replaced by the instance variables
-   of the `TextBook` class, `title` and `publisher`.
-   
+   of the `TextBook` class, `title` and `publisher`. The first line
+   containing "TextBook:" should be there regardless of the values
+   of the instance variables.
    
 1. Remember to provide an appropriate Javadoc comment above the `save`
    method in `TextBook` outlining the format of the file the method will 
    create. You can use the comment in `GameProgress` as a template.
 
-1. Use your compile script to recompile your code and run `check1302`.
+1. Use your compile script to recompile your code and run `check1302`. At this
+   point, you shouldn't see any additional `.txt` files created. We will
+   update the driver program to write `TextBook` objects in the next
+   checkpoint.
 
 <hr/>
 
@@ -261,7 +272,8 @@ as a helpful study guide for the exam.
    input parameter(s) of the existing methods.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
-   `Driver.java` that takes `compilers` as input. Compile and run the
+   `Driver.java` that takes `compilers` as input. The line is already
+   there - it is just commented out. Compile and run the
    code. You should now see a file called `compilersInfo.txt` that
    contains the instance variables of the `TextBook` object referred
    to by variable `compilers`. The contents of `compilersInfo.txt`
@@ -278,23 +290,27 @@ as a helpful study guide for the exam.
    method**! Notice how the `writeToFile` method behaves very
    differently depending on the type of object its parameter `object`
    refers to! This is **polymorphism** in action. The method behaves
-   differently depending on its input.
+   differently depending on the type of object its parameter refers to!
    
-1. In the `main` method of `Driver.java`, uncomment the call to 
+1. In the `main` method of `Driver.java`, update the `writeAllToFile` method
+   in the same way you did `writeToFile`. Then, uncomment the call to 
    `writeAllToFile` that takes `tbArray` as the first input. What do
-   you expect to happen when you run the file? Go ahead and run it to
+   you expect to happen when you run the code? Go ahead and run it to
    verify that it works as expected.
 
 1. Add your own class to the `cs1302.hw.impl` package. It can be a 
    simple class with as few as two instance variables. Have this 
-   class implement the `Savable` interface.  If done properly, 
-   your new class will work with the `writeToFile` and `writeAllToFile` 
-   methods now that those methods work with any object that implements 
-   the `Savable` interface!
+   class implement the `Savable` interface. You can have the `save` method
+   write the instance variables to the file in any format you wish - as long as
+   it is different from how it is done in `GameProgress` and `TextBook`.
+   
+1. If the previous step was done properly, your new class will work with 
+   the `writeToFile` and `writeAllToFile` methods now that those methods 
+   work with any object that implements the `Savable` interface!
    
 1. Test your new class by creating a couple objects in the `Driver` class
    and making calls to both `writeToFile` and `writeAllToFile` using your
-   new type class.
+   new class.
    
 1. Once you are confident that the code is running as expected, verify that 
    your code passes the `checkstyle` audit using the command `check1302 src`.
