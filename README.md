@@ -232,7 +232,11 @@ as a helpful study guide for the exam.
    are running the script for the second time.
 
 1. Now, modify the `TextBook.java` file so that it properly implements
-   the `Savable` interface. You will need to add a `save` method that
+   the `Savable` interface. Please note that you are adding a dependency
+   to `TextBook.java`. It is now dependent on `Savable`. You may have to 
+   change how you compile `TextBook.java` and you may need to add an 
+   import statement for `Savable` if it is in a different package.
+   You will also need to add a `save` method that
    works similarly to the `save` method in `GameProgress`. However,
    your `save` method should write the instance variables of the
    calling object (of type `TextBook`) to a file. The format for these
@@ -269,7 +273,8 @@ as a helpful study guide for the exam.
    also accepts `TextBook` references as input. **Note:** You should
    not create any new methods or add new parameters to existing
    methods to accomplish this. You should only need to modify the
-   input parameter(s) of the existing methods.
+   input parameter(s) of the existing methods. You may also need
+   to modify your import statements.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
    `Driver.java` that takes `compilers` as input. The line is already
