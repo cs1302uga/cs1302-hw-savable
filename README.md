@@ -275,6 +275,14 @@ as a helpful study guide for the exam.
    methods to accomplish this. You should only need to modify the
    input parameter(s) of the existing methods. You may also need
    to modify your import statements.
+   
+   **Hint:** If you're stuck on this step, it is similar to the 
+   `gatherTotalDonations` method in the 
+   [video](https://www.youtube.com/watch?v=kcBV6tlg44I) on Interfaces 
+   provided in the 
+   [1302 Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md).
+   The `gatherTotalDonations` method used an array of `Donator` references. 
+   Your method will just need a single `Savable` reference.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
    `Driver.java` that takes `compilers` as input. The line is already
