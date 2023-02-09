@@ -134,7 +134,8 @@ as a helpful study guide for the exam.
 
 1. Create a single
    [script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md)
-   that compiles each file using a separate `javac` command. You will
+   that compiles each file using a separate `javac` command. Your script
+   should be located directly in your `cs1302-hw-savable` directory. You will
    need to take care when ordering the commands since dependencies
    exists between some of the files. We recommend using the shebang below so
    that your script prints out what it's doing and exits early if
