@@ -282,8 +282,6 @@ as a helpful study guide for the exam.
    [video](https://www.youtube.com/watch?v=kcBV6tlg44I) on Interfaces 
    provided in the 
    [1302 Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md).
-   The `gatherTotalDonations` method used an array of `Donator` references. 
-   Your method will just need a single `Savable` reference.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
    `Driver.java` that takes `compilers` as input. The line is already
@@ -301,7 +299,7 @@ as a helpful study guide for the exam.
 
 1. Compare the contents of `compilersInfo.txt` to the contents of
    `progressInfo.txt`. These two files were created by the **same
-   method**! Notice how the `writeToFile` method behaves very
+   method** but the format is different! The `writeToFile` method behaves very
    differently depending on the type of object its parameter `object`
    refers to! This is **polymorphism** in action. The method behaves
    differently depending on the type of object its parameter refers to!
@@ -316,7 +314,10 @@ as a helpful study guide for the exam.
    simple class with as few as two instance variables. Have this 
    class implement the `Savable` interface. You can have the `save` method
    write the instance variables to the file in any format you wish - as long as
-   it is different from how it is done in `GameProgress` and `TextBook`.
+   it is different from how it is done in `GameProgress` and `TextBook`. 
+   Compare the contents of `compilersInfo.txt` to the contents of
+   `progressInfo.txt` - notice how they are both formatted differently. The
+   file created by your new class should be look different from both of these.
    
 1. If the previous step was done properly, your new class will work with 
    the `writeToFile` and `writeAllToFile` methods now that those methods 
