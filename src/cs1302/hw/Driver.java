@@ -77,7 +77,7 @@ public class Driver {
      * @param objects the array of objects to save.
      * @param prefix the prefix for the filenames.
      */
-    private static void writeAllToFile(GameProgress[] objects, String prefix) {
+    public static void writeAllToFile(GameProgress[] objects, String prefix) {
         for (int i = 0; i < objects.length; i++) {
             GameProgress object = objects[i];
             String filename = prefix + "" + i + ".txt";
