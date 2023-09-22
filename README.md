@@ -4,7 +4,7 @@
 
 When a seasoned programmer or potential employer asks you if you know
 Object-Oriented Programming (OOP), they are NOT asking, "do you know
-classes and objects?"  Instead, what they are really asking is , "do
+classes and objects?" Instead, what they are really asking is, "do
 you know how to apply the pillars of OOP?"  The pillars of OOP are:
 _encapsulation_, _abstraction_ / _interfaces_, _inheritance_, and
 _polymorphism_. **This homework is designed to help you understand
@@ -22,7 +22,7 @@ interfaces and interface-based polymorphism in Java.**
 * **LO3.b:** Create class, interface, method, and inline documentation
   that satisfies a set of requirements.
 * **LO3.c:** Generate user-facing API documentation for a software solution.
-* **L04.b:** Utilize interface-based polymorphism in a software solution.
+* **LO4.b:** Utilize interface-based polymorphism in a software solution.
 
 ## Questions
 
@@ -76,7 +76,7 @@ as a helpful study guide for the exam.
 
    1. Each row should include information about the reference type
       named in the FQN column. With that in mind, **fill in the blanks
-      according to the following column descriptions** -- use the API
+      according to the following column descriptions**. Use the API
       website you created to get the information that you need:
 
       * FQN - the fully qualified name of a reference type (e.g., the
@@ -101,7 +101,7 @@ as a helpful study guide for the exam.
 1. Read the Javadoc comments for the `cs1302.hw.contract.Savable`
    interface, either using the API website that you generated or by
    looking inside `Savable.java`.  As you do this, keep in mind the
-   names of the abstract methods declared in the interface -- the
+   names of the abstract methods declared in the interface — the
    classes that implement `Savable` are contractually obligated to
    provide implementations (i.e., method definitions with bodies) for
    all of those abstract methods.
@@ -145,7 +145,7 @@ as a helpful study guide for the exam.
    #!/bin/bash -ex
    ```
 
-   One your script is setup correctly, you can run it to recompile
+   Once your script is setup correctly, you can run it to recompile
    everything instead of typing the compilation commands again or finding
    them in your shell history!
 
@@ -214,9 +214,9 @@ as a helpful study guide for the exam.
    `java` command to make it easier to see if the program works 
    as intended.
 
-1. Run your modified script to recompile source code, list the
+1. Run your modified script to recompile the source code, list the
    files in the current directory, run the `Driver`, then list
-   files in the current directory again -- all in a single command!
+   files in the current directory again — all in a single command!
 
    You should now see three new files named `progressInfo.txt`, 
    `progress0.txt` and `progress1.txt` that contain the instance 
@@ -225,12 +225,11 @@ as a helpful study guide for the exam.
    files will contain the same data. Take a look at the code to make
    sure you understand why this happened.
 
-   **NOTE** You can add the `rm` command(s) to delete the `.txt` files 
+   **NOTE:** You can add the `rm` command(s) to delete the `.txt` files 
    that were just created. If you want to do this, add the appropriate
    `rm` command(s) before the first `ls -lh` command in your script 
    so that they never appear in your script's output before the `Driver` 
-   is run. They will only appear when you execute first `ls -lh` if you
-   are running the script for the second time.
+   is run.
 
 1. Now, modify the `TextBook.java` file so that it properly implements
    the `Savable` interface. Please note that you are adding a dependency
@@ -285,7 +284,7 @@ as a helpful study guide for the exam.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
    `Driver.java` that takes `compilers` as input. The line is already
-   there - it is just commented out. Compile and run the
+   there — it is just commented out. Compile and run the
    code. You should now see a file called `compilersInfo.txt` that
    contains the instance variables of the `TextBook` object referred
    to by variable `compilers`. The contents of `compilersInfo.txt`
@@ -313,10 +312,10 @@ as a helpful study guide for the exam.
 1. Add your own class to the `cs1302.hw.impl` package. It can be a 
    simple class with as few as two instance variables. Have this 
    class implement the `Savable` interface. You can have the `save` method
-   write the instance variables to the file in any format you wish - as long as
+   write the instance variables to the file in any format you wish, as long as
    it is different from how it is done in `GameProgress` and `TextBook`. 
    Compare the contents of `compilersInfo.txt` to the contents of
-   `progressInfo.txt` - notice how they are both formatted differently. The
+   `progressInfo.txt` — notice how they are both formatted differently. The
    file created by your new class should be look different from both of these.
    
 1. If the previous step was done properly, your new class will work with 
@@ -331,7 +330,7 @@ as a helpful study guide for the exam.
    your code passes the `checkstyle` audit using the command `check1302 src`.
 
 1. Generate the API documentation website for all of the code in the
-   `cs1302` package. Host the documentation on Odin using `cs1302-hw-savable`
+   `cs1302` package. Host the documentation on Odin using `cs1302-hw-savable-doc`
    as the name of your symbolic link.
 
 1. Take a minute to reflect on what you did in this homework assignment. You were
@@ -353,8 +352,8 @@ as a helpful study guide for the exam.
 1. Create a plain text file called `SUBMISSION.md` directly inside the `cs1302-hw-savable`
    directory with the following information:
 
-   1. Your name and UGA ID number; and
-   1. Full URL for your hosted API website
+   1. Your name and UGA ID number;
+   1. Full URL for your hosted API website; and
    1. A short description of the new class that you added to the `cs1302.hw.impl` package in checkpoint 3.
 
    Here is an example of the contents of `SUBMISSION.md`.
@@ -362,8 +361,8 @@ as a helpful study guide for the exam.
    ```
    Sally Smith (811-000-999)
    https://webwork.cs.uga.edu/~your_username/cs1302-hw-savable-doc/
-   I created a class called Turtle because I am a huge fan of turtles. The class has three instance variables
-   (genus, species, and weight).
+   I created a class called Turtle because I am a huge fan of turtles.
+   The class has three instance variables (genus, species, and weight).
    ```
 
 1. Change directories to the parent of `cs1302-hw-savable` (e.g., `cd
