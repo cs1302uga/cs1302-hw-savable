@@ -1,10 +1,10 @@
 # hw03 Interfaces (ADTs)
 
-![Approved for: Fall 2023](https://img.shields.io/badge/Approved%20for-Fall%202023-green)
+![Approved for: Spring 2024](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
 
 When a seasoned programmer or potential employer asks you if you know
 Object-Oriented Programming (OOP), they are NOT asking, "do you know
-classes and objects?" Instead, what they are really asking is, "do
+classes and objects?" Instead, what they are asking is, "do
 you know how to apply the pillars of OOP?"  The pillars of OOP are:
 _encapsulation_, _abstraction_ / _interfaces_, _inheritance_, and
 _polymorphism_. **This homework is designed to help you understand
@@ -26,7 +26,7 @@ interfaces and interface-based polymorphism in Java.**
 
 ## Questions
 
-In your notes, clearly answer the questions in the following exercise
+In your notes, answer the questions in the following exercise
 steps. All instructions assume that you are logged into the Odin
 server.
 
@@ -61,7 +61,7 @@ as a helpful study guide for the exam.
    **TREE** link at the top of the page. This will show you the
    hierarchy of the classes and the interface included in the starter
    code. Look at the documentation for the three class files
-   (`Driver`, `GameProgress` and `TextBook`) and the interface
+   (`Driver`, `GameProgress`, and `TextBook`) and the interface
    (`Savable`) provided in the starter code (you should ignore the
    `java.lang.Object` class for now).
 
@@ -93,7 +93,7 @@ as a helpful study guide for the exam.
         column that this type depends on.
 
       **NOTE:** If a class implements an interface, then the
-      interface name should be listed in Implements column and
+      interface name should be listed in the Implements column and
       the Dependencies column. If a class uses an interface without
       implementing it, then the interface name should only be
       listed in the Dependencies column.
@@ -137,7 +137,7 @@ as a helpful study guide for the exam.
    that compiles each file using a separate `javac` command. Your script
    should be located directly in your `cs1302-hw-savable` directory. You will
    need to take care when ordering the commands since dependencies
-   exists between some of the files. We recommend using the shebang below so
+   exist between some of the files. We recommend using the shebang below so
    that your script prints out what it's doing and exits early if
    a command fails:
 
@@ -145,7 +145,7 @@ as a helpful study guide for the exam.
    #!/bin/bash -ex
    ```
 
-   Once your script is setup correctly, you can run it to recompile
+   Once your script is set up correctly, you can run it to recompile
    everything instead of typing the compilation commands again or finding
    them in your shell history!
 
@@ -181,8 +181,8 @@ as a helpful study guide for the exam.
    variables will be written to the file.
 
    **NOTE:** `PrintWriter` objects allow you to print data to a file
-   using method names that are similar (in name) to the methods you
-   are used to using to print data to the screen. In the `save`
+   using similar method names to the methods you
+   are used to using when you print data to the screen. In the `save`
    method, we create a `PrintWriter` object and then use `println` to
    print variables to the file that's passed in as a parameter.
 
@@ -209,17 +209,17 @@ as a helpful study guide for the exam.
 1. Modify the script that you created in the previous checkpoint
    to include the `java` command to run `cs1302.hw.Driver`
    after all of the `javac` commands. Since the `Driver` program
-   is expected to create some files in current directory, add
+   is expected to create some files in the current directory, add
    the `ls -lh` command to the script both before and after the 
    `java` command to make it easier to see if the program works 
    as intended.
 
-1. Run your modified script to recompile the source code, list the
+1. Run your modified script to recompile the source code,  list the
    files in the current directory, run the `Driver`, then list
    files in the current directory again — all in a single command!
 
    You should now see three new files named `progressInfo.txt`, 
-   `progress0.txt` and `progress1.txt` that contain the instance 
+   `progress0.txt`, and `progress1.txt` that contain the instance 
    variables for the two `GameProgess` objects created by `Driver`. 
    Look inside them to confirm this. Cool, huh?!? Note that two of the
    files will contain the same data. Take a look at the code to make
