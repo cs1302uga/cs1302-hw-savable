@@ -1,9 +1,9 @@
 # hw03 Interfaces (ADTs)
 
-![Approved for: Spring 2024](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
+![Approved for: Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
 
 When a seasoned programmer or potential employer asks you if you know
-Object-Oriented Programming (OOP), they are NOT asking, "do you know
+Object-Oriented Programming (OOP), they are not asking, "do you know
 classes and objects?" Instead, what they are asking is, "do
 you know how to apply the pillars of OOP?"  The pillars of OOP are:
 _encapsulation_, _abstraction_ / _interfaces_, _inheritance_, and
