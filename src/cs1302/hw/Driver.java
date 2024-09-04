@@ -20,7 +20,7 @@ public class Driver {
         GameProgress game1 = new GameProgress(4000, 2);
         GameProgress game2 = new GameProgress(500, 3);
 
-        // Saves an individual GameProgress object to a file called game1.txt
+        // Saves an individual GameProgress object to a file called progressInfo.txt
         Driver.writeToFile(game1, "progressInfo.txt");
 
         GameProgress[] gpArray = new GameProgress[2];
@@ -35,7 +35,7 @@ public class Driver {
         TextBook systems = new TextBook("C++: How to Program", "Pearson");
 
         // Saves an individual GameProgress object to a file called compilersInfo.txt.
-        // Uncomment after updating writeToFile to work with TextBook objects.
+        // Uncomment the next line after updating writeToFile to work with TextBook objects.
         // Driver.writeToFile(compilers, "compilersInfo.txt");
 
         TextBook[] tbArray = new TextBook[3];
