@@ -54,7 +54,10 @@ as a helpful study guide for the exam.
 1. Generate the API documentation website for the `cs1302` package and
    sub-packages. Host the documentation on Odin using
    `cs1302-hw-savable-doc` as the name for your symbolic link.
-   **What is the URL to your hosted website?**
+   Note the URL to your website. You will add it to your submission file
+   at the end of the assignment. Also, remember not to move your `cs1302-hw-savable`
+   folder until after the assignment has been graded. We need to access the `doc`
+   folder from the website url.
 
 1. In your browser of choice, navigate to the API documentation
    website you generated in the previous step and click on the
