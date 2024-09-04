@@ -13,7 +13,7 @@ interfaces and interface-based polymorphism in Java.**
 ## Prerequisite Knowledge
 
 * A basic understanding of creating and implementing interfaces in Java.
-* [CSCI 1302 Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
+* [Interfaces Chapter](https://cs1302uga.github.io/cs1302-book/java/interfaces/interfaces-index.html)
 
 ## Course-Specific Learning Outcomes
 
