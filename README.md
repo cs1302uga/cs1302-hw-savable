@@ -54,10 +54,6 @@ as a helpful study guide for the exam.
 1. Generate the API documentation website for the `cs1302` package and
    sub-packages. Host the documentation on Odin using
    `cs1302-hw-savable-doc` as the name for your symbolic link.
-   Note the URL to your website. You will add it to your submission file
-   at the end of the assignment. Also, remember not to move your `cs1302-hw-savable`
-   folder until after the assignment has been graded. We need to access the `doc`
-   folder from the website url.
 
 1. In your browser of choice, navigate to the API documentation
    website you generated in the previous step and click on the
@@ -131,16 +127,16 @@ as a helpful study guide for the exam.
       the `save` method written in the `Savable` interface.
 
 1. Draw out the
-   [UML diagram](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/uml/uml.md)
+   [UML diagram](https://cs1302uga.github.io/cs1302-book/tools/uml/class-diagrams.html)
    for the given classes and interface to better understand their
    relationships.
 
 1. Create a single
-   [script](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/scripts/scripts.md)
+   [script](https://cs1302uga.github.io/cs1302-book/tools/scripts/scripts-index.html)
    that compiles each file using a separate `javac` command. Your script
-   should be located directly in your `cs1302-hw-savable` directory. You will
-   need to take care when ordering the commands since dependencies
-   exist between some of the files. We recommend using the shebang below so
+   should be located directly in your `cs1302-hw-savable` directory. You must take care
+   when ordering the commands since dependencies
+   exist between some files. We recommend using the shebang below so
    that your script prints out what it's doing and exits early if
    a command fails:
 
@@ -152,7 +148,7 @@ as a helpful study guide for the exam.
    everything instead of typing the compilation commands again or finding
    them in your shell history!
 
-1. Make sure that your script works properly before continuing to the
+1. Ensure your script works properly before continuing to the
    next checkpoint. You can check this by running `tree bin` and
    comparing its output to the expected output below:
 
@@ -217,9 +213,9 @@ as a helpful study guide for the exam.
    `java` command to make it easier to see if the program works 
    as intended.
 
-1. Run your modified script to recompile the source code,  list the
+1. Run your modified script to recompile the source code, list the
    files in the current directory, run the `Driver`, then list
-   files in the current directory again — all in a single command!
+   files in the current directory again — all done with a single script!
 
    You should now see three new files named `progressInfo.txt`, 
    `progress0.txt`, and `progress1.txt` that contain the instance 
@@ -280,10 +276,11 @@ as a helpful study guide for the exam.
    to modify your import statements.
    
    **Hint:** If you're stuck on this step, it is similar to the 
+   [`test` method](https://cs1302uga.github.io/cs1302-book/java/interfaces/using-an-interface.html)
+   in the textbook chapter on interfaces and the
    `gatherTotalDonations` method in the 
-   [video](https://www.youtube.com/watch?v=kcBV6tlg44I) on Interfaces 
-   provided in the 
-   [1302 Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md).
+   [video](https://cs1302uga.github.io/cs1302-book/java/interfaces/common-functionality.html)
+   example.
 
 1. Uncomment the call to `writeToFile` in the `main` method of
    `Driver.java` that takes `compilers` as input. The line is already
@@ -319,13 +316,13 @@ as a helpful study guide for the exam.
    it is different from how it is done in `GameProgress` and `TextBook`. 
    Compare the contents of `compilersInfo.txt` to the contents of
    `progressInfo.txt` — notice how they are both formatted differently. The
-   file created by your new class should be look different from both of these.
+   file created by your new class should look different from each of these.
    
 1. If the previous step was done properly, your new class will work with 
    the `writeToFile` and `writeAllToFile` methods now that those methods 
    work with any object that implements the `Savable` interface!
    
-1. Test your new class by creating a couple objects in the `Driver` class
+1. Test your new class by creating a couple of objects in the `Driver` class
    and making calls to both `writeToFile` and `writeAllToFile` using your
    new class.
    
@@ -335,6 +332,11 @@ as a helpful study guide for the exam.
 1. Generate the API documentation website for all of the code in the
    `cs1302` package. Host the documentation on Odin using `cs1302-hw-savable-doc`
    as the name of your symbolic link.
+   
+   * Note the URL to your website. You will add it to your submission file
+     at the end of the assignment. Also, remember not to move your `cs1302-hw-savable`
+     folder until after the assignment has been graded. We need to access the `doc`
+     folder from the website URL.
 
 1. Take a minute to reflect on what you did in this homework assignment. You were
    able to modify a method called `writeToFile` that was originally designed to
@@ -370,7 +372,7 @@ as a helpful study guide for the exam.
 
 1. Change directories to the parent of `cs1302-hw-savable` (e.g., `cd
    ..` from `cs1302-hw-savable`). If you would like to make a backup
-   tar file, the instructions are in the submissions steps for
+   tar file, the instructions are in the submission steps for
    [hw01](https://github.com/cs1302uga/cs1302-hw01).  We won't repeat
    those steps here and you can view them as optional.
 
